@@ -1,15 +1,12 @@
-function showVideo(videoId) {
-    // Hide all videos
-    const videos = document.querySelectorAll('video');
-    videos.forEach(video => {
-      video.style.display = 'none';
-    });
+function showVideo(videoUrl) {
+    // Hide the central image
+    document.getElementById('center-image').style.display = 'none';
   
-    // Show the selected video
-    const video = document.getElementById(videoId);
-    if (video) {
-      video.style.display = 'block';
-      document.querySelector('.video-container').style.display = 'flex';
-    }
+    // Set the iframe src to the selected video URL
+    const iframe = document.getElementById('video-iframe');
+    iframe.src = videoUrl;
+  
+    // Show the video container
+    document.getElementById('video-container').style.display = 'flex';
   }
   

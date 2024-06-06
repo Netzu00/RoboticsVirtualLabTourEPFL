@@ -1,107 +1,224 @@
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-  }
-  
-  .circle-container {
-    position: relative;
-    width: 600px;
-    height: 600px;
-  }
-  
-  .circle {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    color: white;
-  }
-  
-  .core {
-    background-color: red;
-  }
-  
-  .video-container {
-    margin-top: 20px;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  
-  video {
-    display: none;
-    width: 80%;
-    max-width: 600px;
-  }
-  
-  /* Position circles around like a clock */
-  #circle1 {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  #circle2 {
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  #circle3 {
-    top: 20%;
-    left: 20%;
-    transform: translate(-50%, -50%);
-  }
-  
-  #circle4 {
-    top: 50%;
-    left: 10%;
-    transform: translate(-50%, -50%);
-  }
-  
-  #circle5 {
-    top: 80%;
-    left: 20%;
-    transform: translate(-50%, -50%);
-  }
-  
-  #circle6 {
-    top: 90%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  #circle7 {
-    top: 80%;
-    left: 80%;
-    transform: translate(-50%, -50%);
-  }
-  
-  #circle8 {
-    top: 50%;
-    left: 90%;
-    transform: translate(-50%, -50%);
-  }
-  
-  #circle9 {
-    top: 20%;
-    left: 80%;
-    transform: translate(-50%, -50%);
-  }
-  
-  #circle10 {
-    top: 10%;
-    left: 20%;
-    transform: translate(-50%, -50%);
-  }
-  
+font-family: Arial, sans-serif;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+min-height: 100vh;
+margin-top: 20px;
+}
+
+.circle-container {
+position: relative;
+width: 500px;
+height: 500px;
+}
+
+.circle {
+position: absolute;
+width: 90px;
+height: 90px;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+color: white;
+transition: background-color 0.3s ease;
+text-align: center; /* Center the text horizontally */
+font-size: 12px; /* Make the text smaller */
+padding: 5px; /* Add padding for better text alignment */
+}
+
+.core {
+background-color: #e1001e;
+--hover-color: #ff4d4d;
+}
+
+.outer {
+background-color: #14a89e;
+--hover-color: #a2dfdb;
+z-index: -1;
+}
+
+.core:hover, .outer:hover {
+background-color: var(--hover-color);
+}
+
+.video-container {
+position: absolute;
+top: 47%;
+left: 50%;
+transform: translate(-50%, -50%);
+display: none;
+justify-content: center;
+align-items: center;
+}
+
+video {
+width: 100%;
+max-width: 600px;
+}
+
+iframe {
+width: 560px;
+height: 200px;
+max-width: 100%;
+}
+
+/* Position circles around like a clock */
+#circle1 {
+top: 10%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+#circle2 {
+top: 15%;
+left: 70%;
+transform: translate(-50%, -50%);
+}
+
+#circle3 {
+top: 30%;
+left: 85%;
+transform: translate(-50%, -50%);
+}
+
+#circle4 {
+top: 50%;
+left: 90%;
+transform: translate(-50%, -50%);
+}
+
+#circle5 {
+top: 70%;
+left: 82%;
+transform: translate(-50%, -50%);
+}
+
+#circle6 {
+top: 82%;
+left: 62%;
+transform: translate(-50%, -50%);
+}
+
+#circle7 {
+top: 82%;
+left: 38%;
+transform: translate(-50%, -50%);
+}
+
+#circle8 {
+top: 70%;
+left: 18%;
+transform: translate(-50%, -50%);
+}
+
+#circle9 {
+top: 50%;
+left: 10%;
+transform: translate(-50%, -50%);
+}
+
+#circle10 {
+top: 30%;
+left: 15%;
+transform: translate(-50%, -50%);
+}
+
+#circle11 {
+top: 15%;
+left: 30%;
+transform: translate(-50%, -50%);
+}
+
+/* Position outer circles around the core circles */
+#outer-circle1 {
+top: -3%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+#outer-circle1 .circle-text {
+position: relative; /* Enable positioning of the text */
+top: -10px; /* Move the text 10px upwards */
+/* Alternatively, you can use transform */
+/* transform: translateY(-10px); */ 
+}
+
+#outer-circle2 {
+top: 10%;
+left: 75%;
+transform: translate(-50%, -50%);
+}
+
+#outer-circle3 {
+top: 25%;
+left: 90%;
+transform: translate(-50%, -50%);
+}
+
+#outer-circle4 {
+top: 50%;
+left: 100%;
+transform: translate(-50%, -50%);
+}
+
+#outer-circle5 {
+top: 75%;
+left: 90%;
+transform: translate(-50%, -50%);
+}
+
+#outer-circle6 {
+top: 90%;
+left: 75%;
+transform: translate(-50%, -50%);
+}
+
+#outer-circle7 {
+top: 100%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+#outer-circle8 {
+top: 90%;
+left: 25%;
+transform: translate(-50%, -50%);
+}
+
+#outer-circle9 {
+top: 75%;
+left: 10%;
+transform: translate(-50%, -50%);
+}
+
+#outer-circle10 {
+top: 50%;
+left: 0%;
+transform: translate(-50%, -50%);
+}
+
+#outer-circle11 {
+top: 25%;
+left: 10%;
+transform: translate(-50%, -50%);
+}
+
+#outer-circle12 {
+top: 10%;
+left: 25%;
+transform: translate(-50%, -50%);
+}
+
+/* Center image in the middle of the circles */
+.center-image {
+position: absolute;
+top: 47%;
+left: 50%;
+width: 275px; /* Adjust size as needed */
+height: 75px; /* Adjust size as needed */
+transform: translate(-50%, -50%);
+}
