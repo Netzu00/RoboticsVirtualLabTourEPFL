@@ -8,42 +8,43 @@
 </head>
 <body>
   <div class="circle-container">
-    <div class="circle core" id="circle1" onclick="showVideo('https://www.youtube.com/embed/SrLuHUc0900?si=8E3HdWLYamTtOGFS', 'right')">Biorobotics Lab</div>
-    <div class="circle core" id="circle2" onclick="showVideo('https://www.youtube.com/embed/SrLuHUc0900?si=8E3HdWLYamTtOGFS', 'right')">Computational Robot Design & Fabrication</div>
-    <div class="circle core" id="circle3" onclick="showVideo('https://www.youtube.com/embed/SrLuHUc0900?si=8E3HdWLYamTtOGFS', 'right')">Distributed Intelligent Systems and Algorithms Lab</div>
-    <div class="circle core" id="circle4" onclick="showVideo('https://www.youtube.com/embed/SrLuHUc0900?si=8E3HdWLYamTtOGFS', 'right')">Laboratory of Intelligent Systems</div>
-    <div class="circle core" id="circle5" onclick="showVideo('https://www.youtube.com/embed/SrLuHUc0900?si=8E3HdWLYamTtOGFS', 'right')">Learning Algorithms and Systems Lab</div>
-    <div class="circle core" id="circle6" onclick="showVideo('https://www.youtube.com/embed/SrLuHUc0900?si=8E3HdWLYamTtOGFS', 'right')">MicroBioRobotics Laboratory</div>
-    <div class="circle core" id="circle7" onclick="showVideo('https://www.youtube.com/embed/SrLuHUc0900?si=8E3HdWLYamTtOGFS', 'left')">Mobile Robotic Systems Group</div>
-    <div class="circle core" id="circle8" onclick="showVideo('https://www.youtube.com/embed/SrLuHUc0900?si=8E3HdWLYamTtOGFS', 'left')">Reconfigurable Robotics Lab</div>
-    <div class="circle core" id="circle9" onclick="showVideo('https://www.youtube.com/embed/SrLuHUc0900?si=8E3HdWLYamTtOGFS', 'left')">Systems Control and Multiagent Optimization</div>
-    <div class="circle core" id="circle10" onclick="showVideo('https://www.youtube.com/embed/SrLuHUc0900?si=8E3HdWLYamTtOGFS', 'left')">Translational Neural Engineering Lab</div>
-    <div class="circle core" id="circle11" onclick="showVideo('https://www.youtube.com/embed/SrLuHUc0900?si=8E3HdWLYamTtOGFS', 'left')">Visual Intelligence for Transportation Lab</div>
-    <div class="circle outer" id="outer-circle1" onclick="showVideo('https://www.youtube.com/embed/SrLuHUc0900?si=8E3HdWLYamTtOGFS', 'right')">
+    <canvas id="connection-canvas"></canvas>
+    <div class="circle core" id="circle1" onclick="showVideo('https://www.youtube.com/embed/SrLuHUc0900?si=8E3HdWLYamTtOGFS', 'right', 'circle1')">Biorobotics Lab</div>
+    <div class="circle core" id="circle2" onclick="showVideo('https://www.youtube.com/embed/SrLuHUc0900?si=8E3HdWLYamTtOGFS', 'right', 'circle2')">Computational Robot Design & Fabrication</div>
+    <div class="circle core" id="circle3" onclick="showVideo('https://www.youtube.com/embed/SrLuHUc0900?si=8E3HdWLYamTtOGFS', 'right', 'circle3')">Distributed Intelligent Systems and Algorithms Lab</div>
+    <div class="circle core" id="circle4" onclick="showVideo('https://www.youtube.com/embed/SrLuHUc0900?si=8E3HdWLYamTtOGFS', 'right', 'circle4')">Laboratory of Intelligent Systems</div>
+    <div class="circle core" id="circle5" onclick="showVideo('https://www.youtube.com/embed/SrLuHUc0900?si=8E3HdWLYamTtOGFS', 'right', 'circle5')">Learning Algorithms and Systems Lab</div>
+    <div class="circle core" id="circle6" onclick="showVideo('https://www.youtube.com/embed/SrLuHUc0900?si=8E3HdWLYamTtOGFS', 'right', 'circle6')">MicroBioRobotics Laboratory</div>
+    <div class="circle core" id="circle7" onclick="showVideo('https://www.youtube.com/embed/SrLuHUc0900?si=8E3HdWLYamTtOGFS', 'left', 'circle7')">Mobile Robotic Systems Group</div>
+    <div class="circle core" id="circle8" onclick="showVideo('https://www.youtube.com/embed/SrLuHUc0900?si=8E3HdWLYamTtOGFS', 'left', 'circle8')">Reconfigurable Robotics Lab</div>
+    <div class="circle core" id="circle9" onclick="showVideo('https://www.youtube.com/embed/SrLuHUc0900?si=8E3HdWLYamTtOGFS', 'left', 'circle9')">Systems Control and Multiagent Optimization</div>
+    <div class="circle core" id="circle10" onclick="showVideo('https://www.youtube.com/embed/SrLuHUc0900?si=8E3HdWLYamTtOGFS', 'left', 'circle10')">Translational Neural Engineering Lab</div>
+    <div class="circle core" id="circle11" onclick="showVideo('https://www.youtube.com/embed/SrLuHUc0900?si=8E3HdWLYamTtOGFS', 'left', 'circle11')">Visual Intelligence for Transportation Lab</div>
+    <div class="circle outer" id="outer-circle1" onclick="showVideo('https://www.youtube.com/embed/SrLuHUc0900?si=8E3HdWLYamTtOGFS', 'right', 'outer-circle1')">
         <span class="circle-text">Artificial Intelligence Laboratory</span></div>
-    <div class="circle outer" id="outer-circle2" onclick="showVideo('https://www.youtube.com/embed/SrLuHUc0900?si=8E3HdWLYamTtOGFS', 'right')">
+    <div class="circle outer" id="outer-circle2" onclick="showVideo('https://www.youtube.com/embed/SrLuHUc0900?si=8E3HdWLYamTtOGFS', 'right', 'outer-circle2')">
         <span class="circle-text">Computer-Human Interaction <br>Lab</span></div>
-    <div class="circle outer" id="outer-circle3" onclick="showVideo('https://www.youtube.com/embed/SrLuHUc0900?si=8E3HdWLYamTtOGFS', 'right')">
+    <div class="circle outer" id="outer-circle3" onclick="showVideo('https://www.youtube.com/embed/SrLuHUc0900?si=8E3HdWLYamTtOGFS', 'right', 'outer-circle3')">
         <span class="circle-text">G-LAB UPCOURTINE</span></div>
-    <div class="circle outer" id="outer-circle4" onclick="showVideo('https://www.youtube.com/embed/SrLuHUc0900?si=8E3HdWLYamTtOGFS', 'right')">
+    <div class="circle outer" id="outer-circle4" onclick="showVideo('https://www.youtube.com/embed/SrLuHUc0900?si=8E3HdWLYamTtOGFS', 'right', 'outer-circle4')">
         <span class="circle-text">Intelligent Maintenance and Operations Systems</span></div>
-    <div class="circle outer" id="outer-circle5" onclick="showVideo('https://www.youtube.com/embed/SrLuHUc0900?si=8E3HdWLYamTtOGFS', 'right')">
+    <div class="circle outer" id="outer-circle5" onclick="showVideo('https://www.youtube.com/embed/SrLuHUc0900?si=8E3HdWLYamTtOGFS', 'right', 'outer-circle5')">
         <span class="circle-text">Lab for Creative Computation</span></div>
-    <div class="circle outer" id="outer-circle6" onclick="showVideo('https://www.youtube.com/embed/SrLuHUc0900?si=8E3HdWLYamTtOGFS', 'right')">
+    <div class="circle outer" id="outer-circle6" onclick="showVideo('https://www.youtube.com/embed/SrLuHUc0900?si=8E3HdWLYamTtOGFS', 'right', 'outer-circle6')">
         <span class="circle-text">Soft Bioelectronic Interfaces</span></div>
-    <div class="circle outer" id="outer-circle7" onclick="showVideo('https://www.youtube.com/embed/SrLuHUc0900?si=8E3HdWLYamTtOGFS', 'right')">
+    <div class="circle outer" id="outer-circle7" onclick="showVideo('https://www.youtube.com/embed/SrLuHUc0900?si=8E3HdWLYamTtOGFS', 'right', 'outer-circle7')">
         <span class="circle-text">Laboratory of Cognitive Neuroscience</span></div>
-    <div class="circle outer" id="outer-circle8" onclick="showVideo('https://www.youtube.com/embed/SrLuHUc0900?si=8E3HdWLYamTtOGFS', 'left')">
+    <div class="circle outer" id="outer-circle8" onclick="showVideo('https://www.youtube.com/embed/SrLuHUc0900?si=8E3HdWLYamTtOGFS', 'left', 'outer-circle8')">
         <span class="circle-text">Neuro-engineering <br> Lab</span></div>
-    <div class="circle outer" id="outer-circle9" onclick="showVideo('https://www.youtube.com/embed/SrLuHUc0900?si=8E3HdWLYamTtOGFS', 'left')">
+    <div class="circle outer" id="outer-circle9" onclick="showVideo('https://www.youtube.com/embed/SrLuHUc0900?si=8E3HdWLYamTtOGFS', 'left', 'outer-circle9')">
         <span class="circle-text">Predictive Control Lab</span></div>
-    <div class="circle outer" id="outer-circle10" onclick="showVideo('https://www.youtube.com/embed/SrLuHUc0900?si=8E3HdWLYamTtOGFS', 'left')">
+    <div class="circle outer" id="outer-circle10" onclick="showVideo('https://www.youtube.com/embed/SrLuHUc0900?si=8E3HdWLYamTtOGFS', 'left', 'outer-circle10')">
         <span class="circle-text">Soft Transducers <br> Lab</span></div>
-    <div class="circle outer" id="outer-circle11" onclick="showVideo('https://www.youtube.com/embed/SrLuHUc0900?si=8E3HdWLYamTtOGFS', 'left')">
+    <div class="circle outer" id="outer-circle11" onclick="showVideo('https://www.youtube.com/embed/SrLuHUc0900?si=8E3HdWLYamTtOGFS', 'left', 'outer-circle11')">
         <span class="circle-text">Transport and Mobility Laboratory</span></div>
-    <div class="circle outer" id="outer-circle12" onclick="showVideo('https://www.youtube.com/embed/SrLuHUc0900?si=8E3HdWLYamTtOGFS', 'left')">
+    <div class="circle outer" id="outer-circle12" onclick="showVideo('https://www.youtube.com/embed/SrLuHUc0900?si=8E3HdWLYamTtOGFS', 'left', 'outer-circle12')">
         <span class="circle-text">Urban <br> Transport Systems Laboratory</span></div>
-    <div class="circle outer" id="outer-circle13" onclick="showVideo('https://www.youtube.com/embed/SrLuHUc0900?si=8E3HdWLYamTtOGFS', 'left')">
+    <div class="circle outer" id="outer-circle13" onclick="showVideo('https://www.youtube.com/embed/SrLuHUc0900?si=8E3HdWLYamTtOGFS', 'left', 'outer-circle13')">
         <span class="circle-text">Visual Intelligence for Transportation Lab</span></div>
     <img src="Images/Logo.png" alt="Center Image" class="center-image" id="center-image">
     <div class="video-container-left" id="video-container-left">
