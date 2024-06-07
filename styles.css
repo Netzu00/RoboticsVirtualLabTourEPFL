@@ -47,10 +47,20 @@ z-index: 1;
 background-color: var(--hover-color);
 }
 
-.video-container {
+.video-container-left {
+    position: absolute;
+    top: 50%;
+    left: -51%;
+    transform: translate(-50%, -50%);
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.video-container-right {
 position: absolute;
-top: 47%;
-left: 50%;
+top: 50%;
+right: -120%;
 transform: translate(-50%, -50%);
 display: none;
 justify-content: center;
@@ -63,8 +73,8 @@ max-width: 600px;
 }
 
 iframe {
-width: 530px;
-height: 150px;
+width: 350px;
+height: 210px;
 max-width: 100%;
 }
 
