@@ -8,7 +8,7 @@ function showVideo(videoUrl, side, circleId) {
     const circleHeight = circle.getBoundingClientRect().height;
 
     // Determine the vertical position based on the circle height and apply an offset
-    const offset = 100; // Adjust this value to move the video up or down
+    const offset = 147; // Adjust this value to move the video up or down
     const positionTop = circle.getBoundingClientRect().top + (circleHeight / 2) - offset;
 
     // Determine which video to show based on the side parameter
